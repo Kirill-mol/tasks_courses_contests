@@ -3,6 +3,7 @@ package com.company;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Main {
 
@@ -35,7 +36,7 @@ public class Main {
 
 
 		int[] arr = new int[]{1, 2, 3};
-		List<Integer> intList = Arrays.stream(arr).boxed().toList();
+		List<Integer> intList = Arrays.stream(arr).boxed().collect(Collectors.toList());
 
 		for (final int i : arr) {
 			System.out.println(i);
